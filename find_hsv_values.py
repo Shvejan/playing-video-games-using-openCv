@@ -28,27 +28,10 @@ while True:
     smax = cv2.getTrackbarPos("sat max", 'tracker')
     vmin = cv2.getTrackbarPos("val min", 'tracker')
     vmax = cv2.getTrackbarPos("val max", 'tracker')
-    
-    
-    
-    
     print(hmin, smin, vmin, hmax, smax, vmax)
-    
-    
-    
     mask = cv2.inRange(hsv, (hmin, smin, vmin), (hmax, smax, vmax))
-    
-    
-    
-    
     cv2.imshow('mask', mask)
-    
-    
     final = cv2.bitwise_and(img, img, mask=mask)
-    
-    
-    
-    
     cv2.imshow('final', final)
 
     if cv2.waitKey(1) == 13:
