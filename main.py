@@ -4,10 +4,9 @@ import imutils
 
 vdo = cv2.VideoCapture(0)
 
-colors = [[76, 89, 95, 147, 105, 191], [
-   102 ,117 ,111 ,156 ,120 ,195], [119, 178, 59, 229, 255, 255]]
 
-green_range = np.array([76, 95, 105, 89, 147, 191])
+
+green_range = np.array([73, 104, 77, 90, 200, 199])
 blue_range =np.array( [102 ,111 ,120 ,117 ,156 ,195])
 while True:
     _, frame = vdo.read()
@@ -41,7 +40,7 @@ while True:
                     x = int(m['m10']/m['m00'])
                     y = int(m['m01']/m['m00'])
                     position_of_green= (x,y)
-                    cv2.circle(frame, (x,y), 2, (255,0,255), 2)
+                    cv2.circle(frame, (x,y), 5, (255,0,255), 5)
                 
     
     if(detected_colors[0]):
