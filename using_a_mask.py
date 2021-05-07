@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 video = cv2.VideoCapture(0)
 
-color_range = np.array([73, 104, 77, 90, 200, 199])
+color_range = np.array([104 ,90 ,46 ,113 ,176 ,174])
 
 
 while True:
